@@ -20,4 +20,14 @@ const Job = (props) => {
   );
 };
 
+// //JAVASCRIPT FUNCTION
+// const GetName = () => {
+//   return "PEDRO";
+// };
+
+// //JSX COMPONENT
+// const GetNameJSX = () => {
+//   return <h1>PEDRO</h1>;
+// };
+
 export default App;
