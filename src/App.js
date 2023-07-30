@@ -14,7 +14,16 @@ function App() {
     <div className="App">
       {planets.map(
         (planet, key) => !planet.isGasPlanet && <h1> {planet.name} </h1>
-      )}
+      )
+      }
+
+      {/* //OR
+      <div className="App">
+        {planets.map((planet,key)=>{
+            if (planet.isGasPlanet) return <h1>{planet.name}</h1>
+        })}
+      </div> */}
+    
     </div>
   );
 }
