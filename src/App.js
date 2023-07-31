@@ -10,6 +10,8 @@ function App() {
     { name: "Uranus", isGasPlanet: true },
   ];
 
+  const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"];
+
   return (
     <div className="App">
       {planets.map(
@@ -24,7 +26,11 @@ function App() {
         })}
       </div> */}
     
+    <h1> {names[1]} </h1>
+
     </div>
+
+    
   );
 }
 
