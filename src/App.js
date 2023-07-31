@@ -1,4 +1,5 @@
 import "./App.css";
+import { User } from "./User";
 
 function App() {
   const planets = [
@@ -10,7 +11,13 @@ function App() {
     { name: "Uranus", isGasPlanet: true },
   ];
 
-  const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"];
+  const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Lukas"];
+
+  const users = [
+    {name: "Pedrito", age: 21},
+    {name: "Jakes", age: 25},
+    {name: "Jessicana", age: 45},
+  ];
 
   return (
     <div className="App">
@@ -26,12 +33,38 @@ function App() {
         })}
       </div> */}
     
-    <h1> {names[1]} </h1>
+    <h1> {names[0]} </h1>
+
+    {names.map((name, key) => {
+      return <h1 key={key}> {name} </h1>;
+
+    })}
+
+      {/* you can do it this way or 
+      do it the other way, check the react way below */}
+
+      {/* {users.map((user, key) => {
+        return (
+          <div> 
+          {user.pangalan} {user.age} 
+          </div>
+        );
+
+      })} */}
+
+      {users.map((user, key) => {
+        return <User name={user.name} age={user.age} />;
+      })}
+     
 
     </div>
 
+   
     
+
   );
 }
+
+
 
 export default App;
