@@ -33,6 +33,8 @@ function App() {
   //state for show or hide text
   const [showText, setShowText] = useState(true);
 
+  //state changing color
+  const [textColor, setTextColor] = useState("black");
 
   return (
     <div className="App">
@@ -42,15 +44,22 @@ function App() {
 
       {count}
 
+
       {/* This only applies to vanilla javascript */}
       {/* {age}
       <button onClick={increaseAge}> Increase Age </button> */}
 
+
       <input type="text" onChange={handleInputChange}/>
       {inputValue}
 
+
       <button onClick={() => {setShowText(!showText)}}> Show/Hide Text </button>
       {showText === true && <h1> HI MY NAME IS VJ </h1>}
+
+
+      <button onClick={() => {setTextColor(textColor === "black" ? "red" : "black")}}> Show Text Color </button>
+      <h1 style={{color: textColor}}> HI MY NAME IS VJ </h1>
     </div>
   );
 }
