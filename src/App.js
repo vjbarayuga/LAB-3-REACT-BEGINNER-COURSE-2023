@@ -3,13 +3,17 @@ import { useState } from "react";
 import { Task } from "./Task";
 
 function App() {
+  //states
   const [todoList, setTodoList] = useState([]);
   const [newTask, setNewTask] = useState("");
 
+  //function to handle change for the input box of the add task
   const handleChange = (event) => {
+    //this is to set the new task event
     setNewTask(event.target.value);
   };
 
+  //function to add task for the add task button
   const addTask = () => {
     const task = {
       id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
@@ -19,9 +23,13 @@ function App() {
     setTodoList(task.taskName !== "" ? [...todoList, task] : todoList);
   };
 
+
+
   const deleteTask = (id) => {
     setTodoList(todoList.filter((task) => task.id !== id));
   };
+
+
 
   const completeTask = (id) => {
     setTodoList(
@@ -35,12 +43,19 @@ function App() {
     );
   };
 
+
+
   return (
     <div className="App">
+
+
       <div className="addTask">
         <input onChange={handleChange} />
+
         <button onClick={addTask}> Add Task</button>
       </div>
+
+
       <div className="list">
         {todoList.map((task) => {
           return (
@@ -53,6 +68,7 @@ function App() {
             />
           );
         })}
+
       </div>
     </div>
   );
