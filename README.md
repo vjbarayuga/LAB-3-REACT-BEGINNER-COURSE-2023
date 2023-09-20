@@ -1,4 +1,4 @@
-## LAB-3-REACT-BEGINNER-COURSE-2023
+## REACT-BEGINNER-COURSE-2023
 
 ## How to use this repository.
 
