@@ -5,10 +5,10 @@ function App() {
   const planets = [
     { name: "Mars", isGasPlanet: false },
     { name: "Earth", isGasPlanet: false },
-    { name: "Jupiter", isGasPlanet: true },
+    { name: "Jupiter", isGasPlanet: false },
     { name: "Venus", isGasPlanet: false },
-    { name: "Neptune", isGasPlanet: true },
-    { name: "Uranus", isGasPlanet: true },
+    { name: "Neptune", isGasPlanet: false },
+    { name: "Uranus", isGasPlanet: false },
   ];
 
   const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Lukas"];
